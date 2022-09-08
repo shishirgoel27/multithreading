@@ -6,7 +6,22 @@ import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.ForkJoinTask;
 import java.util.concurrent.RecursiveTask;
 import java.util.stream.Collectors;
-
+/**
+ * 
+ * @author shishir
+ * 
+ * Given beginWord, endWord and a list of distinct words, find the minimum count of words 
+ * starting from beginWord and differing by one letter to form a chain to match endWord
+ * Ex: beginWord=cat, endWord=mob, wordList=cot, mob, cop, mop, cob, cut
+ * word chain = cat->cot->cop->mop->mob | cat->cot->cob->mob
+ * minWordCount = cat->cot->cob->mob = 4(including beginWord and endWord)
+ * 
+ * Conditions : 
+ * 	All words have equal length
+ * 	All words in the wordList are distinct
+ * 	WordList does not contain beginWord
+ * 	If no word chain available, return 0.
+ */
 public class WordLadder {
 	
 	public static void main(String[] args) {
